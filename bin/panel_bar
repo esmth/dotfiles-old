@@ -1,0 +1,61 @@
+#! /bin/sh
+#
+# Example panel for LemonBoy's bar
+
+#occupied="◼"
+#unoccupied="◻"
+
+occupied="="
+unoccupied="-"
+
+focuscolor="%{F#B6A699}"
+unfocuscolor="%{F#D8CFC6}"
+backcolor="%{B#EAE2E1}"
+
+while read -r line ; do
+    case $line in
+        C*)
+            # conky yall
+            conky="$focuscolor${line#?}"
+            ;;
+        W*)
+            # bspwm internal state
+            wm_infos=""
+            IFS=':'
+            set -- ${line#?}
+            while [ $# -gt 0 ] ; do
+                item=$1
+                name=${item#?}
+                case $item in
+                    O*)
+                        # focused occupied desktop
+                        wm_infos="$wm_infos $focuscolor$backcolor$occupied${name}"
+                        ;;
+                    F*)
+                        # focused free desktop
+                        wm_infos="$wm_infos $focuscolor$backcolor$unoccupied${name}"
+                        ;;
+                    U*)
+                        # focused urgent desktop
+                        wm_infos="$wm_infos $focuscolor$backcolor$occupied${name}"
+                        ;;
+                    o*)
+                        # occupied desktop
+                        wm_infos="$wm_infos $unfocuscolor$backcolor$occupied${name}"
+                        ;;
+                    f*)
+                        # free desktop
+                        wm_infos="$wm_infos $unfocuscolor$backcolor$unoccupied${name}"
+                        ;;
+                    u*)
+                        # urgent desktop
+                        wm_infos="$wm_infos $unfocuscolor$backcolor$occupied${name}"
+                        ;;
+                esac
+                shift
+            done
+            ;;
+    esac
+    printf "%s\n" "%{l}$wm_infos %{c}%{A:timeout 5s bar -g 20x80+400:} my cats yellow %{A} %{r}$conky%{A:xset dpms force off:} %{A}"
+    printf "%s\n" "%{l}$wm_infos %{c} %{r}%{A:date | timeout 5s dzen2 -x 1740 -y 16 -p -ta l -fn "-*-terminus-medium-*-*-*-*-*-*-*-*-*-*-*" -fg "#ffffff":}$conky%{A}"
+done
