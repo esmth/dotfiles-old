@@ -56,6 +56,5 @@ while read -r line ; do
             done
             ;;
     esac
-    printf "%s\n" "%{l}$wm_infos %{c}%{A:timeout 5s bar -g 20x80+400:} my cats yellow %{A} %{r}$conky%{A:xset dpms force off:} %{A}"
-    printf "%s\n" "%{l}$wm_infos %{c} %{r}%{A:date | timeout 5s dzen2 -x 1740 -y 16 -p -ta l -fn "-*-terminus-medium-*-*-*-*-*-*-*-*-*-*-*" -fg "#ffffff":}$conky%{A}"
+    printf "%s\n" "%{l}$wm_infos %{c} %{r}$conky%{A:sh /home/esmth/bin/lock:} %{A}"
 done
