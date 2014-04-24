@@ -1,7 +1,6 @@
 out_to_console yes
 update_interval 2
 use_spacer left
-#pad_percents 2
 
 TEXT
 C${cpu}%% ${memperc}%% ${time %m/%d %H:%M}
