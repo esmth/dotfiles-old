@@ -1,0 +1,68 @@
+!dzen2.font:       -*-clearsans-medium-r-*-*-17-*-*-*-*-*-*
+!dzen2.foreground: #EAD9BF
+!dzen2.background: #866E6E
+
+!URxvt.depth: 32
+!URxvt.background: [35]#eeeeee
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/chromium
+URxvt.matcher.button: 1
+
+URxvt*saveLines: 50000
+URxvt.scrollBar:            false
+
+!URxvt.perl-ext-common:      default,matcher
+!URxvt.matcher.button:       1
+!URxvt.urlLauncher:          /usr/bin/chromium
+
+!URxvt.cursorBlink:          true
+!URxvt.cursorColor:          #657b83
+!URxvt.cursorUnderline:      true
+
+!URxvt*font: xft:clear sans light:pixelsize=13
+!URxvt*boldFont: xft:clear sans light:pixelsize=13
+
+!URxvt*font: -*-uushi-*-*-*-11-*-*-*-*-*-*-*
+!URxvt*boldFont: -*-uushi-*-*-*-11-*-*-*-*-*-*-*
+
+URxvt*font: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
+URxvt*boldFont: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
+
+!*background: #121212
+
+*background: #f3f3f3
+*foreground: #909090
+ 
+!! black dark/light
+*color0: #3f3f4c
+*color8: #525263
+ 
+!! red dark/light
+*color1: #ac6a76
+*color9: #c47987
+ 
+!! green dark/light
+*color2: #7b8c58
+*color10: #90a366
+ 
+!! yellow dark/light
+*color3: #bc945a
+*color11: #d4a765
+ 
+!! blue dark/light
+*color4: #58698c
+*color12: #7086b2
+ 
+!! magenta dark/light
+*color5: #7b5e8d
+*color13: #9572ab
+ 
+!! cyan dark/light
+*color6: #82a1b2
+*color14: #95b9cc
+ 
+!! white dark/light
+*color7: #74748c
+*color15: #9e9ebf
+
