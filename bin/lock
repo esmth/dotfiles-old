@@ -1,0 +1,4 @@
+#!/bin/bash
+convert x:root -blur 0x7 /tmp/lockscreen.blur.png
+i3lock -i /tmp/lockscreen.blur.png -u
+
