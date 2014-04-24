@@ -17,5 +17,6 @@ alias agug="sudo apt-get upgrade"
 alias acs="apt-cache search"
 alias agp="sudo apt-get purge"
 alias fucking="sudo"
+alias ls="ls --color=auto"
 
 source /home/esmth/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
