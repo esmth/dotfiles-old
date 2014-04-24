@@ -1,0 +1,5 @@
+cd /home/esmth/.fonts
+mkfontscale
+mkfontdir
+xset +fp /home/esmth/.fonts
+cd -
