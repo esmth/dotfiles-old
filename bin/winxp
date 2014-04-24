@@ -1,1 +1,1 @@
-sudo qemu-system-i386 -m 2048 -hda winxp.img -hdb /dev/sdc --enable-kvm --runas esmth -cdrom Visual\ Basic\ 6.0\[A4\].iso
+sudo qemu-system-i386 -m 2048 -hda winxp.img -hdb /dev/sdc --enable-kvm --runas esmth
