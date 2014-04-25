@@ -2,15 +2,15 @@
 #
 # Example panel for LemonBoy's bar
 
-#occupied="◼"
-#unoccupied="◻"
+occupied="◼"
+unoccupied="◻"
 
-occupied="="
-unoccupied="-"
+#occupied="="
+#unoccupied="-"
 
-focuscolor="%{F#B6A699}"
-unfocuscolor="%{F#D8CFC6}"
-backcolor="%{B#EAE2E1}"
+focuscolor="%{F#9EB0C6}"
+unfocuscolor="%{F#707F93}"
+backcolor="%{B#4A576A}"
 
 while read -r line ; do
     case $line in
