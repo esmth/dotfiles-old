@@ -18,5 +18,6 @@ alias acs="apt-cache search"
 alias agp="sudo apt-get purge"
 alias fucking="sudo"
 alias ls="ls --color=auto"
+alias fs="screenfetch"
 
 source /home/esmth/src/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
