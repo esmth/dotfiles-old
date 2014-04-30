@@ -1,0 +1,10 @@
+#!/bin/bash
+
+spacer="%{B#f3f3f3} %{B-}"
+reset_menu="%{A:reset_menu:}%{B#9EB0C6} ◀ %{B-}%{A}"
+volume_button="%{A:menu_expand_volume:}%{B#9EB0C6} Vol %{B-}%{A}"
+music_button="%{A:menu_expand_music:}%{B#9EB0C6} Mus %{B-}%{A}"
+
+echo "Q$volume_button$spacer$music_button$spacer$reset_menu" > /tmp/panel-fifo
+
+#echo "Q%{A:amixer -c 0 set Master 1dB+:}%{B#9EB0C6} + %{B-}%{A}%{B#f3f3f3} %{B-}%{A:amixer -c 0 set Master 1dB-:}%{B#9EB0C6} - %{B-}%{A}%{B#f3f3f3} %{B-}%{A:amixer  set Master 1+ toggle:}%{B#9EB0C6} MUTE %{B-}%{A}%{B#f3f3f3} %{B-}%{A::}%{B#9EB0C6} ͻ %{B-}%{A}%{B#f3f3f3} %{B-}%{A:reset_menu:}%{B#9EB0C6} ▢ %{B-}%{A}" > /tmp/panel-fifo
