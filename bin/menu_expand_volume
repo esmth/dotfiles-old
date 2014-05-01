@@ -1,0 +1,10 @@
+#!/bin/bash
+
+spacer="%{B#f3f3f3} %{B-}"
+reset_menu="%{A:reset_menu:}%{B#9EB0C6} ◀ %{B-}%{A}"
+volume_button="%{A:main_menu:}%{B#9EB0C6} Vol %{B-}%{A}"
+volume_subbutton="%{B#f3f3f3}%{F#9EB0C6} %{A:amixer  set Master 1+ toggle:}Mute%{A} %{A:amixer -c 0 set Master 1dB+:}Up%{A} %{A:amixer -c 0 set Master 1dB-:}Down%{A} %{F-}%{B-}"
+music_button="%{A:menu_expand_music:}%{B#9EB0C6} Mus %{B-}%{A}"
+
+echo "Q$volume_button$volume_subbutton$music_button$spacer$reset_menu" > /tmp/panel-fifo
+

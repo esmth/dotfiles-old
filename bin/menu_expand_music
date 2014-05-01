@@ -1,0 +1,9 @@
+#!/bin/bash
+
+spacer="%{B#f3f3f3} %{B-}"
+reset_menu="%{A:reset_menu:}%{B#9EB0C6} ◀ %{B-}%{A}"
+volume_button="%{A:main_menu:}%{B#9EB0C6} Vol %{B-}%{A}"
+music_button="%{A:main_menu:}%{B#9EB0C6} Mus %{B-}%{A}"
+music_subbutton="%{B#f3f3f3}%{F#9EB0C6} %{A:echo -n 'p' > ~/.config/pianobar/ctl:}Play/pause%{A} %{A:echo -n 'n' > ~/.config/pianobar/ctl:}Next%{A} %{A:echo -n '+' > ~/.config/pianobar/ctl:}Love%{A} %{A:echo -n '-' > ~/.config/pianobar/ctl:}Hate%{A} %{F-}%{B-}"
+
+echo "Q$volume_button$spacer$music_button$music_subbutton$spacer$reset_menu" > /tmp/panel-fifo
