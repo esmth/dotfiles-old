@@ -1,0 +1,3 @@
+echo "N $@" >> /tmp/panel-fifo
+sleep 5
+echo "N" >> /tmp/panel-fifo
