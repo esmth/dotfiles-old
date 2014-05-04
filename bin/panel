@@ -17,13 +17,12 @@ mkfifo "$PANEL_FIFO"
 bspc config top_padding 20
 
 bspc control --subscribe > "$PANEL_FIFO" &
-#xtitle -sf 'T%s' > "$PANEL_FIFO" &
-#clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
 conky > "$PANEL_FIFO" &
+echo "Q%{B#9eb0c6}%{F#f3f3f3} ▢ %{F-}%{B-}" > "$PANEL_FIFO" &
 
 case "$flavor" in
     bar)
-        cat "$PANEL_FIFO" | panel_bar | bar -f -*-tewi-medium-*-*-*-*-*-*-*-*-*-*-* &
+        cat "$PANEL_FIFO" | panel_bar | bar -f -*-tewi-medium-*-*-*-*-*-*-*-*-*-*-* -B "#F3F3F3" &
         ;;
 esac
 

@@ -1,26 +1,22 @@
 #! /bin/sh
-#
-# Example panel for LemonBoy's bar
 
 occupied="◼"
-unoccupied="◻"
+unoccupied="_"
 
-#occupied="="
-#unoccupied="-"
+#focuscolor="#909090"
+#unfocuscolor="#9EB0C6"
+#backcolor="#F3F3F3"
+color1="#72859E"
+color2="#9EB0C6"
+bcolor="#F3F3F3"
 
-#focuscolor="%{F#9EB0C6}"
-#unfocuscolor="%{F#707F93}"
-#backcolor="%{B#4A576A}"
-
-focuscolor="%{F#909090}"
-unfocuscolor="%{F#9EB0C6}"
-backcolor="%{B#f3f3f3}"
+#menu="▢"
 
 while read -r line ; do
     case $line in
         C*)
             # conky yall
-            conky="$focuscolor${line#?}"
+            conky="%{F$bcolor}${line#?}"
             ;;
         W*)
             # bspwm internal state
@@ -33,32 +29,40 @@ while read -r line ; do
                 case $item in
                     O*)
                         # focused occupied desktop
-                        wm_infos="$wm_infos $focuscolor$backcolor$occupied${name}"
+                        wm_infos="%{A:}$wm_infos %{F$color1}$occupied${name}"
                         ;;
                     F*)
                         # focused free desktop
-                        wm_infos="$wm_infos $focuscolor$backcolor$unoccupied${name}"
+                        wm_infos="$wm_infos %{F$color1}$unoccupied${name}"
                         ;;
                     U*)
                         # focused urgent desktop
-                        wm_infos="$wm_infos $focuscolor$backcolor$occupied${name}"
+                        wm_infos="$wm_infos %{F$color1}$occupied${name}"
                         ;;
                     o*)
                         # occupied desktop
-                        wm_infos="$wm_infos $unfocuscolor$backcolor$occupied${name}"
+                        wm_infos="$wm_infos %{F$bcolor}$occupied${name}"
                         ;;
                     f*)
                         # free desktop
-                        wm_infos="$wm_infos $unfocuscolor$backcolor$unoccupied${name}"
+                        wm_infos="$wm_infos %{F$bcolor}$unoccupied${name}"
                         ;;
                     u*)
                         # urgent desktop
-                        wm_infos="$wm_infos $unfocuscolor$backcolor$occupied${name}"
+                        wm_infos="$wm_infos %{F$bcolor}$occupied${name}"
                         ;;
                 esac
                 shift
             done
             ;;
+        Q*)
+            # custom menu
+            menu="${line#?}"
+            ;;
+        N*)
+            # notification center
+            notification="${line#?}"
+            ;;
     esac
-    printf "%s\n" "%{l}$wm_infos %{c} %{r}$conky%{A:sh /home/esmth/bin/lock:} %{A}"
+    printf "%s\n" "%{l}%{B$color2}$wm_infos %{B-}%{B$bcolor} %{B-}%{A:main_menu:}$menu%{A}$notification%{r}%{B$color2} $conky%{A:lock:} %{A}%{B-}"
 done
