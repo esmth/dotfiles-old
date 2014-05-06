@@ -1,0 +1,2 @@
+#!/bin/sh
+(echo " $@"; sleep 1) | bar -g 120x20+72+16
