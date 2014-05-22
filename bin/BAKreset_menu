@@ -1,0 +1,1 @@
+echo "Q%{B#9eb0c6}%{F#f3f3f3} ▶ %{F-}%{B-}" > /tmp/panel-fifo
