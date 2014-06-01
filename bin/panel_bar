@@ -1,6 +1,6 @@
 #! /bin/sh
 
-occupied="▩"
+occupied="■"
 unoccupied="_"
 
 color1="#b9b3a8"
