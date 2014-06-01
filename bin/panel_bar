@@ -3,14 +3,11 @@
 occupied="◼"
 unoccupied="_"
 
-#focuscolor="#909090"
-#unfocuscolor="#9EB0C6"
-#backcolor="#F3F3F3"
-color1="#72859E"
-color2="#9EB0C6"
-bcolor="#F3F3F3"
+color1="#b9b3a8"
+color2="#9d534a"
+bcolor="#f1f0eb"
 
-#menu="▢"
+menu=" oh "
 
 while read -r line ; do
     case $line in
@@ -29,27 +26,27 @@ while read -r line ; do
                 case $item in
                     O*)
                         # focused occupied desktop
-                        wm_infos="%{A:}$wm_infos %{F$color1}$occupied${name}"
+                        wm_infos="$wm_infos%{F$bcolor}<$occupied>"
                         ;;
                     F*)
                         # focused free desktop
-                        wm_infos="$wm_infos %{F$color1}$unoccupied${name}"
+                        wm_infos="$wm_infos%{F$bcolor}<$unoccupied>"
                         ;;
                     U*)
                         # focused urgent desktop
-                        wm_infos="$wm_infos %{F$color1}$occupied${name}"
+                        wm_infos="$wm_infos%{F$bcolor}<$occupied>"
                         ;;
                     o*)
                         # occupied desktop
-                        wm_infos="$wm_infos %{F$bcolor}$occupied${name}"
+                        wm_infos="$wm_infos%{F$bcolor}($occupied)"
                         ;;
                     f*)
                         # free desktop
-                        wm_infos="$wm_infos %{F$bcolor}$unoccupied${name}"
+                        wm_infos="$wm_infos%{F$bcolor}($unoccupied)"
                         ;;
                     u*)
                         # urgent desktop
-                        wm_infos="$wm_infos %{F$bcolor}$occupied${name}"
+                        wm_infos="$wm_infos%{F$bcolor}($occupied)"
                         ;;
                 esac
                 shift
@@ -61,8 +58,8 @@ while read -r line ; do
             ;;
         N*)
             # notification center
-            notification="${line#?}"
+            notification=" ${line#?}"
             ;;
     esac
-    printf "%s\n" "%{l}%{B$color2}$wm_infos %{B-}%{B$bcolor} %{B-}%{A:main_menu:}$menu%{A}$notification%{r}%{B$color2} $conky%{A:lock:} %{A}%{B-}"
+    printf "%s\n" "%{l}%{B$color2} $wm_infos %{B-}%{B$bcolor} %{B-}%{B$color2}$menu%{B-}%{F$color2}$notification%{F-}%{r}%{B$color2} $conky%{A:lock:} %{A}%{B-}"
 done

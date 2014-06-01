@@ -18,7 +18,7 @@ bspc config top_padding 20
 
 bspc control --subscribe > "$PANEL_FIFO" &
 conky > "$PANEL_FIFO" &
-echo "Q%{B#9eb0c6}%{F#f3f3f3} ▢ %{F-}%{B-}" > "$PANEL_FIFO" &
+echo "" > "$PANEL_FIFO" &
 
 case "$flavor" in
     bar)
