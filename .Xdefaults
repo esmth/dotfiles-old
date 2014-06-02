@@ -1,26 +1,26 @@
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/chromium
-URxvt.matcher.button: 1
+*Rxvt.perl-ext-common: default,matcher
+*Rxvt.url-launcher: /usr/bin/chromium
+*Rxvt.matcher.button: 1
 
-URxvt.keysym.C-1:           command:\033]710;-*-uushi-medium-*-*-*-*-*-*-*-*-*-*-*\007
-URxvt.keysym.C-2:           command:\033]710;-*-tewi-medium-*-*-*-*-*-*-*-*-*-*-*\007
-URxvt.keysym.C-3:           command:\033]710;-*-lemon-medium-*-*-*-*-*-*-*-*-*-*-*\007
-URxvt.keysym.C-4:           command:\033]710;-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*\007
+!*Rxvt.keysym.C-1:           command:\033]710;-*-uushi-medium-*-*-*-*-*-*-*-*-*-*-*\007
+!*Rxvt.keysym.C-2:           command:\033]710;-*-tewi-medium-*-*-*-*-*-*-*-*-*-*-*\007
+!*Rxvt.keysym.C-3:           command:\033]710;-*-lemon-medium-*-*-*-*-*-*-*-*-*-*-*\007
+!*Rxvt.keysym.C-4:           command:\033]710;-*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*\007
 
-URxvt.urgentOnBell:  true
+!*Rxvt.urgentOnBell:  true
 
-URxvt*saveLines: 50000
-URxvt.scrollBar:            false
+URxvt*saveLines: 1024
+*Rxvt.scrollBar:            false
 
-URxvt.cursorBlink:          true
-URxvt.cursorColor:          #657b83
-!URxvt.cursorUnderline:      true
+!*Rxvt.cursorBlink:          true
+*Rxvt.cursorColor:          #657b83
+!*Rxvt.cursorUnderline:      true
 
-URxvt*font: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
-URxvt*boldFont: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
+*Rxvt*font: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
+*Rxvt*boldFont: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
 
-*background: #f3f3f3
-*foreground: #909090
+*background: #f1f0eb
+*foreground: #201f1d
  
 !! black dark/light
 *color0: #3f3f4c
