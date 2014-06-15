@@ -16,11 +16,13 @@ URxvt*saveLines: 1024
 *Rxvt.cursorColor:          #657b83
 !*Rxvt.cursorUnderline:      true
 
-*Rxvt*font: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
 *Rxvt*boldFont: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
+*Rxvt*font: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
 
-*background: #f1f0eb
-*foreground: #201f1d
+!*background: #f1f0eb
+!*foreground: #201f1d
+*background: #201f1d
+*foreground: #f1f0eb
  
 !! black dark/light
 *color0: #3f3f4c
