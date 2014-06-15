@@ -19,40 +19,40 @@ URxvt*saveLines: 1024
 *Rxvt*boldFont: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
 *Rxvt*font: -*-uushi-medium-*-*-*-*-*-*-*-*-*-*
 
-!*background: #f1f0eb
-!*foreground: #201f1d
-*background: #201f1d
-*foreground: #f1f0eb
- 
+*background: #FAF5E6
+!*background: #E3E1D0
+*foreground: #202020
+
+!! colors from Base16
 !! black dark/light
-*color0: #3f3f4c
-*color8: #525263
+*color0: #151515
+*color8: #151515
  
 !! red dark/light
-*color1: #ac6a76
-*color9: #c47987
+*color1: #ac4142
+*color9: #ac4142
  
 !! green dark/light
-*color2: #7b8c58
-*color10: #90a366
+*color2: #90a959
+*color10: #90a959
  
 !! yellow dark/light
-*color3: #bc945a
-*color11: #d4a765
+*color3: #f4bf75
+*color11: #f4bf75
  
 !! blue dark/light
-*color4: #58698c
-*color12: #7086b2
+*color4: #6a9fb5
+*color12: #6a9fb5
  
 !! magenta dark/light
-*color5: #7b5e8d
-*color13: #9572ab
+*color5: #aa759f
+*color13: #aa759f
  
 !! cyan dark/light
-*color6: #82a1b2
+*color6: #75b5aa
 *color14: #95b9cc
  
 !! white dark/light
-*color7: #74748c
-*color15: #9e9ebf
+*color7: #505050
+*color15: #505050
 
